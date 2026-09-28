@@ -1,0 +1,17 @@
+{
+  "name": "coflow",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "db:migrate": "pnpm --filter @coflow/server db:migrate"
+  },
+  "devDependencies": {
+    "turbo": "^2.11.5",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@coflow/server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "db:migrate": "tsx scripts/migrate.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/bullmq": "^11.0.0",
+    "bullmq": "^6.3.9",
+    "ioredis": "^5.8.0",
+    "pg": "^8.23.0",
+    "bcryptjs": "^3.0.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0",
+    "@coflow/contracts": "workspace:*",
+    "@coflow/domain": "workspace:*",
+    "@coflow/connector-sdk": "workspace:*",
+    "@coflow/agent-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
